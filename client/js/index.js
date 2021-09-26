@@ -29,6 +29,7 @@ function apiSet(num, lat, lon, city, flag) {
             document.getElementById(num + "pressure").innerHTML = data.main.pressure + " hpa";
             document.getElementById(num + "humidity").innerHTML = data.main.humidity + "%";
             document.getElementById(num + "coords").innerHTML = data.coord.lon + " " + data.coord.lat;
+            document.getElementById(num + "img").src = "../img/" + data.weather[0].main + ".png";
             if(flag === 1){
                 fetch('http://localhost:3000/favor?city=' + data.name,
                     {
