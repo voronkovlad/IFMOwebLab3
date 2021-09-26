@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Воронков Владислав Погода</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href=https://pbs.twimg.com/profile_images/939602858734968833/0Ovtk3uK.jpg>
+    <script src="../js/index.js"></script>
+</head>
+<body onload="onCreate()">
+    <div class="container">
+        <section class="main-city">
+            <div class="section__header main-city__header">
+                <h2 class="title">Погода здесь</h2>
+                <button class="button header__button" onclick="getLocation()">Обновить геолокацию</button>
+                <button class="button header__button_refresh">
+                    <img src="../img/refresh.png"></img>
+                </button>
+            </div>
+            <div class="main-city__container">
+                <div class="city__block">
+                    <h3 class="main-city__title" id="main-city">Saint Petersburg</h3>
+                    <div class="main-city__weather-container">
+                        <div class="main-city__weather-icon">
+                            <img src="../img/weather.png" id="main-img"></img>
+                        </div>
+                            <div class="main-city__weather" id="main-temp"></div>
+                    </div>
+                </div>
+                <div  class="city__block">
+                    <div class="weather-info">
+                        <div class="weather-info__title">Ветер</div>
+                        <div class="weather-info__text" id="main-wind"></div>
+                    </div>
+                    <div class="weather-info">
+                        <div class="weather-info__title">Облачность</div>
+                        <div class="weather-info__text" id="main-cloud"></div>
+                    </div>
+                    <div class="weather-info">
+                        <div class="weather-info__title">Давление</div>
+                        <div class="weather-info__text" id="main-pressure"></div>
+                    </div>
+                    <div class="weather-info">
+                        <div class="weather-info__title">Влажность</div>
+                        <div class="weather-info__text" id="main-humidity"></div>
+                    </div>
+                    <div class="weather-info">
+                        <div class="weather-info__title">Координаты</div>
+                        <div class="weather-info__text" id="main-coords"> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cities" >
+            <div class="section__header cities__header">
+                <h2 class="title">Избранное</h2>
+                <div class="cities__add">
+                    <input class="cities__add-input" type="text" placeholder="Добавить новый город" id="inp">
+                    <button class="small-button cities__add-button" onclick="addTown()">+</button>
+                </div>
+            </div>
+            <div class="cities__container" id="allcity">
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
